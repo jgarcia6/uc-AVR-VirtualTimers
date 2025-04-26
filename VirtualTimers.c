@@ -6,6 +6,7 @@
 void timer1s_callback(void) 
 {
     static uint8_t counter = 0;
+    counter++;
     UART_gotoxy(0,5,2);
     itoa(UBRR0,str,10);
     UART_puts(0,str);
@@ -15,6 +16,7 @@ void timer1s_callback(void)
 void timer5s_callback(void) 
 {
     static uint8_t counter = 0;
+    counter+=5;
     UART_gotoxy(0,5,3);
     itoa(UBRR0,str,10);
     UART_puts(0,str);
